@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+    body{
+  font-family: Verdana,sans-serif;margin:0;
+  
+}
+
+</style>
+<link rel="stylesheet" type="text/css" href="cssFolder/signin.css"></a>
+	<title></title>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+<ul class = "links">
+
+  <li class = "navi"><a href="signin.html">Sign-in</a></li>
+  <li class = "navi"><a href="simple-php-shopping-cart/index.php">Items</a></li>
+  <li class = "navi"><a href="phpFolder/profile.php">Profile</a></li>
+  <li class = "navi"><a href="contact.html">Contact</a></li>
+  <li class = "navi"><a href="adminLogin.html">Admin</a></li>
+  </ul>
+</div>
+<h1 align="center">Sign In</h1>
+<h3 align="center">To login as an Admin: UserName = admin and PassWord=admin</h3>
+<div>
+  <form action="phpFolder/adminLogin.php" method="post">
+    <label for="fname">Username:   </label>
+    <input type="text" id="uname" name="user-name" required>
+    <br>
+    <label for="lname">Password:&nbsp; </label>
+    <input type="password" id="pwd" name="pass-word" required>
+    <br> 
+    <input style="font-size:20px; width:100px; height:50px; padding-top:-10px;" type="submit" value="Submit">
+    
+    
+  </form>
+</div>
+
+
+</body>
+</html>

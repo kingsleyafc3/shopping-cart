@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="cssFolder/contact.css">
+<title>
+Contact Us!
+</title>
+
+</head>
+
+<body>
+<div id="mySidenav" class="sidenav">
+<ul class = "links">
+
+  <li class = "navi"><a href="../signin.html">Sign-in</a></li>
+  <li class = "navi"><a href="../simple-php-shopping-cart/index.php">Items</a></li>
+  <li class = "navi"><a href="phpFolder/profile.php">Profile</a></li>
+  <li class = "navi"><a href="../contact.html">Contact</a></li>
+  <li class = "navi"><a href="adminLogin.html">Admin</a></li>
+  </ul>
+</div>
+<style type="text/css">
+body{
+  background-image: url("product-images/contact1.jpg");
+}
+</style>
+
+<h1 class="emboss">Get in touch!</h1>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<p class="one">Email us with any questions or inquiries or call us at 508-777-1111. We would be happy to answer your questions and even set up a phone appointment if needed.</p>
+<div>
+  <form action="action.php" method="post">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname">
+
+    <label for="country">State</label>
+    <select id="country" name="country">
+      <option value="Georgia">Georgia</option>
+      <option value="NY">NY</option>
+      <option value="Texas">Texas</option>
+    </select>
+    <label for="country" >Issue:</label>
+    <textarea placeholder="Please describe your issue in brief" name="ta" style="font-weight:bold; "></textarea>
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>

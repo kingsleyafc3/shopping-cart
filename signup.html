@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="cssFolder/signin.css"></a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Sign Up!</title>
+    <style type="text/css">
+        body{
+            font-family: Verdana,sans-serif;margin:0;
+            
+        }
+    </style>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+    <ul class = "links">
+    <li class = "navi"><a href="test.html">Home</a></li>
+    <li class = "navi"><a href="signin.html">Sign-in</a></li>
+    <li class = "navi"><a href="simple-php-shopping-cart/index.php">Items</a></li>
+    <li class = "navi"><a href="phpFolder/profile.php">Profile</a></li>
+    <li class = "navi"><a href="contact.html">Contact</a></li>
+    <li class = "navi"><a href="adminLogin.html">Admin</a></li>
+    </ul>
+</div>
+
+
+<h1 align="center" class="emboss">Sign Up!</h1>
+<div>
+    <form  name="form1" action="phpFolder/signup.php" method="post" onsubmit="return gotosign()">
+        <label for="fname">FirstName: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; </label>
+        <input type="text" id="fname" name="firstname" required><br>
+
+        <label for="lname">LastName: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; </label>
+        <input type="text" id="lname" name="lastname" required><br>
+
+        <label for="email">E-mail(Username):</label>
+        <input type="text" id="email" name="email" required><br>
+
+        <label for="pwd">Password:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; </label>
+        <input type="password" id="pwd" name="pwd" required><br>
+
+        <label for="cpwd">Confirm Password: </label>
+        <input type="password" id="cpwd" name="cpwd" required><br>
+
+        <input style="width:25%; margin-left: 155px;" type="submit" id="submit"   value="Submit">
+
+    </form>
+    <script type="text/javascript">
+
+        function gotosign() {
+            var email = document.forms["form1"]["email"].value;
+            var first = document.forms["form1"]["firstname"].value;
+            var pass = document.forms["form1"]["pwd"].value;
+            var cpass = document.forms["form1"]["cpwd"].value;
+            var ok = true;
+            if (email == "" || first == "" || pass == "" || cpass == "")
+            {
+                alert("Please input the required value");
+
+                //return false;
+            }
+            else if(pass != cpass){
+                alert("Passwords must match");
+                document.getElementById("pwd").style.borderColor = "#E34234";
+                document.getElementById("cpwd").style.borderColor = "#E34234";
+                ok = false;
+                // return false;
+            }
+          return ok;
+
+        }
+    </script>
+</div>
+</body>
+</html>

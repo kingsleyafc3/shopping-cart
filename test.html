@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="cssFolder/home.css">
+
+<style type="text/css">
+  body{
+  font-family: Verdana,sans-serif;margin:0;
+ 
+  
+}
+
+</style>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+<ul class = "links">
+
+  <li class = "navi"><a href="signin.html">Sign-in</a></li>
+  <li class = "navi"><a href="simple-php-shopping-cart/index.php">Items</a></li>
+  <li class = "navi"><a href="phpFolder/profile.php">Profile</a></li>
+  <li class = "navi"><a href="contact.html">Contact</a></li>
+  <li class = "navi"><a href="adminLogin.html">Admin</a></li>
+  </ul>
+</div>
+
+
+
+<br>
+<br>
+<h1 class="heading">BALL IS LIFE</h1>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="product-images/pic1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="product-images/pic2.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="product-images/pic3.jpg" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="product-images/pic4.jpg" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="product-images/pic5.jpg" style="width:100%">
+</div>
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" ></span>
+  <span class="dot" ></span>
+  <span class="dot" ></span>
+  <span class="dot" ></span>
+  <span class="dot" ></span>
+</div>
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
+
